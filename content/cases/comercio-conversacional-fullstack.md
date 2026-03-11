@@ -15,7 +15,7 @@ case:
     - painel operacional em tempo real
   results:
     - 90% de redução no transbordo do atendimento de IA para humano
-    - mais de 300 conversas gerenciadas por IA
+    - mais de 300 conversas gerenciadas nos primeiros 15 dias
     - R$ 8 mil em pedidos nos primeiros 15 dias
 ---
 ## Contexto

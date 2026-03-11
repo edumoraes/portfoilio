@@ -488,10 +488,20 @@ h3 {
 
 .case-hero {
   display: grid;
+  gap: 1.25rem;
+  padding-top: 2rem;
+}
+
+.case-hero__meta {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.case-hero__content {
+  display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
   gap: 1.5rem;
-  align-items: start;
-  padding-top: 2rem;
+  align-items: center;
 }
 
 .case-hero__copy {
@@ -614,7 +624,7 @@ h3 {
 
 @media (max-width: 900px) {
   .hero,
-  .case-hero,
+  .case-hero__content,
   .split,
   .metrics,
   .timeline-list {

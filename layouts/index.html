@@ -45,7 +45,7 @@
 
       <div class="project-grid">
         {{ range .Params.projects.items }}
-          <a class="project-card-link" href="{{ .url | relURL }}">
+          <a class="project-card-link" href="{{ strings.TrimPrefix `/` .url | absURL }}">
             <article class="project-card">
               <p class="project-index">{{ .index }}</p>
               <h3>{{ .title }}</h3>

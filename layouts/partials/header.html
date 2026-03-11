@@ -1,11 +1,11 @@
 <header class="site-header">
-  {{ $home := "/" | relLangURL }}
+  {{ $home := .Site.Home.Permalink }}
   <div class="site-header__inner">
-    <a class="brand" href="{{ if .IsHome }}{{ `#top` | safeURL }}{{ else }}{{ $home }}{{ end }}">Eduardo de Moraes</a>
+    <a class="brand" href="{{ $home }}">Eduardo de Moraes</a>
     <nav class="site-nav" aria-label="Navegação principal">
-      <a href="{{ if .IsHome }}{{ `#projects` | safeURL }}{{ else }}{{ printf "%s#projects" $home | safeURL }}{{ end }}">Projetos</a>
-      <a href="{{ if .IsHome }}{{ `#about` | safeURL }}{{ else }}{{ printf "%s#about" $home | safeURL }}{{ end }}">Sobre</a>
-      <a href="{{ if .IsHome }}{{ `#contact` | safeURL }}{{ else }}{{ printf "%s#contact" $home | safeURL }}{{ end }}">Contato</a>
+      <a href="{{ printf "%s#projects" $home | safeURL }}">Projetos</a>
+      <a href="{{ printf "%s#about" $home | safeURL }}">Sobre</a>
+      <a href="{{ printf "%s#contact" $home | safeURL }}">Contato</a>
     </nav>
   </div>
 </header>

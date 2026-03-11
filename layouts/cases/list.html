@@ -10,7 +10,7 @@
       <div class="project-grid">
         {{ range .Pages.ByWeight }}
           {{ $case := .Params.case }}
-          <a class="project-card-link" href="{{ .RelPermalink }}">
+          <a class="project-card-link" href="{{ .Permalink }}">
             <article class="project-card">
               <p class="project-index">{{ $case.index }}</p>
               <h3>{{ .Title }}</h3>
