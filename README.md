@@ -44,7 +44,9 @@ docker run --rm -v "$PWD":/src -w /src ghcr.io/gohugoio/hugo:latest --minify
 1. Faça commit e push para `main`.
 2. No GitHub, abra `Settings > Pages`.
 3. Em `Build and deployment`, selecione `GitHub Actions`.
-4. O workflow `Deploy Hugo site` vai gerar e publicar a pasta `public/`.
+4. O workflow `Deploy Hugo site` tenta habilitar o Pages automaticamente no primeiro deploy.
+5. Se o repositório ainda retornar `Get Pages site failed` ou `Not Found`, confirme manualmente em `Settings > Pages` que o Pages está ativo para o repositório e rode o workflow novamente.
+6. O workflow vai gerar e publicar a pasta `public/`.
 
 ## Próximos ajustes
 
