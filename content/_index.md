@@ -6,7 +6,7 @@ hero:
   title: Construo produtos web e fluxos operacionais aumentados por IA.
   text: Sou Eduardo de Moraes, desenvolvedor fullstack com experiência em backend, interfaces e automações que saem do experimento e entram na operação. Uno engenharia, visão de produto e leitura de UX para entregar sistemas úteis, mensuráveis e prontos para uso real.
   image:
-    src: /images/perfil.jpg
+    src: images/perfil.jpg
     alt: Retrato de Eduardo de Moraes em ambiente de trabalho
   primary_cta:
     label: Ver cases
