@@ -1,7 +1,7 @@
 <header class="site-header">
   {{ $home := "/" | relLangURL }}
   <div class="site-header__inner">
-    <a class="brand" href="{{ if .IsHome }}{{ `#top` | safeURL }}{{ else }}{{ $home }}{{ end }}">EDU</a>
+    <a class="brand" href="{{ if .IsHome }}{{ `#top` | safeURL }}{{ else }}{{ $home }}{{ end }}">Eduardo de Moraes</a>
     <nav class="site-nav" aria-label="Navegação principal">
       <a href="{{ if .IsHome }}{{ `#projects` | safeURL }}{{ else }}{{ printf "%s#projects" $home | safeURL }}{{ end }}">Projetos</a>
       <a href="{{ if .IsHome }}{{ `#about` | safeURL }}{{ else }}{{ printf "%s#about" $home | safeURL }}{{ end }}">Sobre</a>
