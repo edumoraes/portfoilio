@@ -16,15 +16,23 @@
       </div>
 
       <aside class="hero-card" aria-label="Resumo profissional">
-        <p class="card-label">{{ .Params.availability.label }}</p>
-        <ul class="summary-list">
-          {{ range .Params.availability.items }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          {{ .Params.availability.status }}
+        {{ with .Params.hero.image }}
+          <div class="hero-card-media">
+            <img src="{{ .src | relURL }}" alt="{{ .alt }}" />
+          </div>
+        {{ end }}
+
+        <div class="hero-card-body">
+          <p class="card-label">{{ $.Params.availability.label }}</p>
+          <ul class="summary-list">
+            {{ range $.Params.availability.items }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            {{ $.Params.availability.status }}
+          </div>
         </div>
       </aside>
     </section>
@@ -86,6 +94,26 @@
             <span>{{ .step }}</span>
             <h3>{{ .title }}</h3>
             <p>{{ .description }}</p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="section reveal" id="testimonials">
+      <div class="section-heading">
+        <p class="eyebrow">{{ .Params.testimonials.eyebrow }}</p>
+        <h2>{{ .Params.testimonials.heading }}</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        {{ range .Params.testimonials.items }}
+          {{ $size := .size | default "standard" }}
+          <article class="testimonial-card testimonial-card--{{ $size }}">
+            <p class="testimonial-quote">"{{ .quote }}"</p>
+            <div class="testimonial-meta">
+              <strong>{{ .name }}</strong>
+              <span>{{ .role }}</span>
+            </div>
           </article>
         {{ end }}
       </div>

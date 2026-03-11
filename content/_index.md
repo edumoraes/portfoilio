@@ -5,6 +5,9 @@ hero:
   eyebrow: Fullstack Engineer • TypeScript • Python • produto web • IA aplicada
   title: Construo produtos web e fluxos operacionais aumentados por IA.
   text: Sou Eduardo de Moraes, desenvolvedor fullstack com experiência em backend, interfaces e automações que saem do experimento e entram na operação. Uno engenharia, visão de produto e leitura de UX para entregar sistemas úteis, mensuráveis e prontos para uso real.
+  image:
+    src: /images/perfil.jpg
+    alt: Retrato de Eduardo de Moraes em ambiente de trabalho
   primary_cta:
     label: Ver cases
     target: "#projects"
@@ -62,6 +65,26 @@ operating_model:
     - step: "03"
       title: Meço impacto no uso real
       description: Priorizo redução de fricção, indicadores operacionais e confiabilidade, não só uma demo bonita.
+testimonials:
+  eyebrow: Recomendações
+  heading: Como pessoas com quem trabalhei descrevem minha forma de atuar.
+  items:
+    - name: Alvaro Ribeiro
+      size: featured
+      role: Product Designer Sênior • colaboração profissional • agosto de 2021
+      quote: Eduardo de Moraes possui fortes competências técnicas e excelente visão de processo e produto. Destaco sua resiliência, empatia, simpatia e excelente capacidade de comunicação. Considero que tem todas as condições para evoluir rapidamente na carreira e constituir um ativo de enorme valor para qualquer organização.
+    - name: Silvestre Paiva
+      size: standard
+      role: Co-Founder, Canvi e Trocados • supervisão direta • agosto de 2021
+      quote: Eduardo possui uma linha de pensamento que prioriza todos os lados envolvidos. Sua visão aguçada para resolver problemas faz com que ele contribua em várias áreas da empresa. Eduardo é um ótimo profissional.
+    - name: Amanda Iunes
+      size: wide
+      role: Comunicação e branding • trabalho em equipes diferentes • agosto de 2021
+      quote: Eduardo foi uma das melhores pessoas com quem já trabalhei. Dedicado, organizado e focado, sempre procurando fazer o melhor e ajudar quem precisa. Além de ser uma ótima pessoa para trabalhar, entrega um trabalho muito forte tanto na parte gráfica quanto em UX e UI design.
+    - name: Gellies Vieira
+      size: standard
+      role: Supervisão direta • agosto de 2021
+      quote: Eduardo sempre foi muito bom com projetos e organização de processos. Sua organização e metodologia criativa contribuíram bastante para crescimento e aumento de desempenho.
 contact:
   heading: Se o seu time precisa de engenharia fullstack com visão de produto e IA aplicada, vamos conversar.
   links:
