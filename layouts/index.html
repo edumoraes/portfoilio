@@ -37,15 +37,6 @@
       </aside>
     </section>
 
-    <section class="metrics section reveal" aria-label="Indicadores">
-      {{ range .Params.metrics }}
-        <article>
-          <strong>{{ .number }}</strong>
-          <p>{{ .text }}</p>
-        </article>
-      {{ end }}
-    </section>
-
     <section class="section reveal" id="projects">
       <div class="section-heading">
         <p class="eyebrow">{{ .Params.projects.eyebrow }}</p>
