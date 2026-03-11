@@ -54,17 +54,20 @@
 
       <div class="project-grid">
         {{ range .Params.projects.items }}
-          <article class="project-card">
-            <p class="project-index">{{ .index }}</p>
-            <h3>{{ .title }}</h3>
-            <p>{{ .description }}</p>
-            <p class="project-stack">{{ .stack }}</p>
-            <ul class="project-results">
-              {{ range .results }}
-                <li>{{ . }}</li>
-              {{ end }}
-            </ul>
-          </article>
+          <a class="project-card-link" href="{{ .url | relURL }}">
+            <article class="project-card">
+              <p class="project-index">{{ .index }}</p>
+              <h3>{{ .title }}</h3>
+              <p>{{ .description }}</p>
+              <p class="project-stack">{{ .stack }}</p>
+              <ul class="project-results">
+                {{ range .results }}
+                  <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+              <span class="project-cta">Ler case</span>
+            </article>
+          </a>
         {{ end }}
       </div>
     </section>
@@ -127,7 +130,8 @@
 
       <div class="contact-panel">
         {{ range .Params.contact.links }}
-          <a href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noreferrer"{{ end }}>
+          <a class="contact-link" href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noreferrer"{{ end }}>
+            <span class="contact-link__icon contact-link__icon--{{ .icon | default `generic` }}" aria-hidden="true"></span>
             {{ .text }}
           </a>
         {{ end }}

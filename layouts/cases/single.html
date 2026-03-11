@@ -1,0 +1,61 @@
+{{ define "main" }}
+  {{ $case := .Params.case }}
+  {{ $home := "/" | relLangURL }}
+  <main id="top">
+    <article class="case-page">
+      <section class="case-hero section reveal">
+        <div class="case-hero__copy">
+          <a class="case-back" href="{{ printf "%s#projects" $home | safeURL }}">Voltar aos cases</a>
+          <p class="eyebrow">{{ $case.eyebrow }}</p>
+          <p class="project-index">{{ $case.index }}</p>
+          <h1>{{ .Title }}</h1>
+          <p class="case-summary">{{ $case.summary }}</p>
+          <p class="project-stack">{{ $case.stack }}</p>
+        </div>
+
+        <aside class="case-sidebar">
+          {{ with $case.scope }}
+            <section class="case-panel" aria-label="Escopo da solução">
+              <p class="card-label">Escopo</p>
+              <ul class="case-tag-list">
+                {{ range . }}
+                  <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </section>
+          {{ end }}
+
+          {{ with $case.results }}
+            <section class="case-panel" aria-label="Resultados e efeitos">
+              <p class="card-label">Destaques</p>
+              <ul class="project-results">
+                {{ range . }}
+                  <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </section>
+          {{ end }}
+
+          {{ with $case.links }}
+            <section class="case-panel" aria-label="Links relacionados">
+              <p class="card-label">Links</p>
+              <div class="case-links">
+                {{ range . }}
+                  <a href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noreferrer"{{ end }}>
+                    {{ .label }}
+                  </a>
+                {{ end }}
+              </div>
+            </section>
+          {{ end }}
+        </aside>
+      </section>
+
+      <section class="case-body section reveal">
+        <div class="case-article">
+          {{ .Content }}
+        </div>
+      </section>
+    </article>
+  </main>
+{{ end }}

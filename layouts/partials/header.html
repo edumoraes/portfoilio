@@ -1,10 +1,11 @@
 <header class="site-header">
+  {{ $home := "/" | relLangURL }}
   <div class="site-header__inner">
-    <a class="brand" href="{{ `#top` | safeURL }}">EDU</a>
+    <a class="brand" href="{{ if .IsHome }}{{ `#top` | safeURL }}{{ else }}{{ $home }}{{ end }}">EDU</a>
     <nav class="site-nav" aria-label="Navegação principal">
-      <a href="{{ `#projects` | safeURL }}">Projetos</a>
-      <a href="{{ `#about` | safeURL }}">Sobre</a>
-      <a href="{{ `#contact` | safeURL }}">Contato</a>
+      <a href="{{ if .IsHome }}{{ `#projects` | safeURL }}{{ else }}{{ printf "%s#projects" $home | safeURL }}{{ end }}">Projetos</a>
+      <a href="{{ if .IsHome }}{{ `#about` | safeURL }}{{ else }}{{ printf "%s#about" $home | safeURL }}{{ end }}">Sobre</a>
+      <a href="{{ if .IsHome }}{{ `#contact` | safeURL }}{{ else }}{{ printf "%s#contact" $home | safeURL }}{{ end }}">Contato</a>
     </nav>
   </div>
 </header>

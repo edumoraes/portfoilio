@@ -114,6 +114,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 0.75rem;
+  text-wrap: balance;
 }
 
 h1,
@@ -123,6 +124,7 @@ h3 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   line-height: 0.95;
+  text-wrap: balance;
 }
 
 h1 {
@@ -143,11 +145,18 @@ h3 {
 .hero-text,
 .about-copy p,
 .project-card p,
-.timeline-list p {
+.timeline-list p,
+.section-heading p,
+.testimonial-quote,
+.testimonial-meta span,
+.case-summary,
+.case-article p,
+.case-article li {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
   font-size: 1rem;
+  text-wrap: pretty;
 }
 
 .hero-text {
@@ -201,12 +210,12 @@ h3 {
   flex-direction: column;
   gap: 1.2rem;
   padding: 1.5rem;
-  border-radius: 1.75rem;
+  border-radius: 1.2rem;
 }
 
 .hero-card-media {
   overflow: hidden;
-  border-radius: 1.2rem;
+  border-radius: 0.95rem;
   aspect-ratio: 1 / 1;
 }
 
@@ -229,6 +238,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.75rem;
+  text-wrap: balance;
 }
 
 .summary-list {
@@ -261,9 +271,10 @@ h3 {
 
 .metrics article,
 .project-card,
+.case-panel,
 .timeline-list article {
   padding: 1.4rem;
-  border-radius: 1.4rem;
+  border-radius: 1rem;
 }
 
 .metrics strong,
@@ -292,6 +303,11 @@ h3 {
   gap: 1rem;
 }
 
+.project-card-link {
+  display: block;
+  height: 100%;
+}
+
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -307,6 +323,26 @@ h3 {
 .project-card {
   display: grid;
   gap: 1rem;
+  height: 100%;
+}
+
+.project-card-link:hover .project-card {
+  transform: translateY(-4px);
+  border-color: rgba(198, 86, 47, 0.24);
+}
+
+.project-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.project-cta::after {
+  content: "→";
 }
 
 .testimonial-card {
@@ -315,7 +351,7 @@ h3 {
   height: 100%;
   align-content: start;
   padding: 1.5rem;
-  border-radius: 1.4rem;
+  border-radius: 1rem;
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: var(--shadow);
@@ -355,7 +391,6 @@ h3 {
 }
 
 .testimonial-quote {
-  margin: 0;
   color: var(--text);
   font-size: 1rem;
   line-height: 1.75;
@@ -398,16 +433,172 @@ h3 {
   display: grid;
   gap: 1rem;
   padding: 1.5rem;
-  border-radius: 1.75rem;
+  border-radius: 1.2rem;
 }
 
 .contact-panel a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   width: fit-content;
   border-bottom: 1px solid transparent;
 }
 
 .contact-panel a:hover {
   border-color: currentColor;
+}
+
+.contact-link__icon {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 1.3rem;
+  height: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 0.32rem;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.contact-link__icon::before {
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.contact-link__icon--email::before {
+  content: "@";
+}
+
+.contact-link__icon--linkedin::before {
+  content: "in";
+  font-size: 0.64rem;
+}
+
+.contact-link__icon--x::before {
+  content: "X";
+}
+
+.case-page {
+  display: grid;
+  gap: 0;
+}
+
+.case-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+  gap: 1.5rem;
+  align-items: start;
+  padding-top: 2rem;
+}
+
+.case-hero__copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-back {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.case-back::before {
+  content: "←";
+}
+
+.case-back:hover {
+  color: var(--accent);
+}
+
+.case-summary {
+  max-width: 62ch;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.case-sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-panel {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.case-tag-list,
+.case-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.case-tag-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-tag-list li,
+.case-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.2rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.45);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.case-links a:hover {
+  color: var(--accent);
+  border-color: rgba(198, 86, 47, 0.28);
+}
+
+.case-body {
+  padding-top: 1rem;
+}
+
+.case-article {
+  display: grid;
+  gap: 1.4rem;
+  width: min(760px, 100%);
+}
+
+.case-article h2,
+.case-article h3 {
+  max-width: 16ch;
+}
+
+.case-article h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.case-article h3 {
+  margin-top: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.case-article ul {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.case-article strong {
+  color: var(--text);
 }
 
 .reveal {
@@ -423,6 +614,7 @@ h3 {
 
 @media (max-width: 900px) {
   .hero,
+  .case-hero,
   .split,
   .metrics,
   .timeline-list {
@@ -455,6 +647,10 @@ h3 {
   .testimonial-card--featured {
     grid-column: 1 / -1;
   }
+
+  .case-body {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -470,13 +666,42 @@ h3 {
     padding-top: 1.5rem;
   }
 
+  h2,
+  .case-article h2 {
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .section-heading {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .section-heading .eyebrow {
+    margin-inline: auto;
+    text-align: center;
+  }
+
   .hero-actions,
+  .case-links,
   .site-nav {
     flex-wrap: wrap;
   }
 
   .button {
     width: 100%;
+  }
+
+  .case-tag-list,
+  .case-links {
+    gap: 0.55rem;
+  }
+
+  .case-tag-list li,
+  .case-links a {
+    width: 100%;
+    justify-content: center;
   }
 
   .testimonial-grid {

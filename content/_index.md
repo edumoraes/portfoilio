@@ -33,20 +33,41 @@ projects:
   heading: Experiência aplicada em produto, operação e IA em produção.
   items:
     - index: Case 01
-      title: Comércio conversacional com agentes, pagamentos e dashboards
-      description: Plataforma fullstack para operação comercial via WhatsApp, conectando agentes, carrinhos, pedidos, clientes, pagamentos e acompanhamento em tempo real para o time.
-      stack: FastAPI • PostgreSQL • Redis • WebSockets • LangGraph • Next.js • WhatsApp
+      title: Comércio conversacional fullstack com IA, checkout guiado e operação em tempo real
+      description: Solução fullstack para vender via conversa, combinar catálogo, atendimento automatizado, checkout controlado e acompanhamento em tempo real sem perder o controle da operação.
+      stack: Next.js • FastAPI • PostgreSQL • Redis • Elasticsearch • LangGraph • WebSockets • WhatsApp
+      url: /cases/comercio-conversacional-fullstack/
       results:
         - 90% de redução no transbordo do atendimento de IA para humano
         - mais de 300 conversas gerenciadas por IA
         - R$ 8 mil em pedidos nos primeiros 15 dias
     - index: Case 02
-      title: Classificação de catálogo com IA, OCR e automação de relatórios
-      description: Fluxo de ingestão e classificação de produtos com IA para acelerar operação de catálogo, consolidar dados e automatizar saídas úteis para o time.
-      stack: Python • LangGraph • OpenAI • OCR • Excel • automação de relatórios
+      title: Classificação de catálogo com IA, busca assistida e fallback operacional
+      description: Pipeline para transformar um trabalho manual de classificação em um fluxo auditável, com busca web, decisão assistida por LLM, score de confiança e saídas prontas para operação.
+      stack: Python • LangGraph • OpenAI • DuckDuckGo Search • Excel • GUI/CLI
+      url: /cases/classificacao-de-catalogo-com-ia/
       results:
         - reduziu para horas um processo que levaria pelo menos 3 semanas
         - automatizou a organização de catálogo e a consolidação operacional
+        - manteve dúvida e erro como estados explícitos, sem mascarar incerteza
+    - index: Case 03
+      title: ViraLaTeX, uma workstation local-first para documentos com IA assistiva
+      description: Produto open source para escrever, estruturar e renderizar documentos profissionais com arquivos locais como fonte da verdade e IA operando com aprovação explícita.
+      stack: Tauri • Rust • React • TypeScript • Python • LangGraph • Tectonic
+      url: /cases/viralatex/
+      results:
+        - preserva arquivos locais como fonte da verdade
+        - renderiza PDFs localmente com pipeline inspecionável
+        - exige aprovação humana antes de mutações no workspace
+    - index: Case 04
+      title: Scraping operacional com geocodificação, deduplicação e leitura territorial
+      description: Ferramenta para mapear presença física e cobertura territorial a partir de scraping, geração radial de CEPs e visualização geográfica em mapa interativo.
+      stack: Python • Playwright • Geopy • Streamlit • CSV • geocodificação
+      url: /cases/scraping-inteligencia-territorial/
+      results:
+        - amplia a cobertura de coleta a partir de um CEP central e raio configurável
+        - remove duplicidades antes da análise
+        - transforma dados brutos em mapa utilizável para operação
 about:
   heading: Engenharia com senso de produto, interface e operação.
   paragraphs:
@@ -89,9 +110,15 @@ contact:
   heading: Se o seu time precisa de engenharia fullstack com visão de produto e IA aplicada, vamos conversar.
   links:
     - label: E-mail
+      icon: email
       url: "mailto:edumoraesdg@gmail.com"
       text: edumoraesdg@gmail.com
     - label: LinkedIn
+      icon: linkedin
       url: "https://www.linkedin.com/in/edumoraesdg"
       text: linkedin.com/in/edumoraesdg
+    - label: X
+      icon: x
+      url: "https://x.com/edumoraes_dg"
+      text: x.com/edumoraes_dg
 ---
