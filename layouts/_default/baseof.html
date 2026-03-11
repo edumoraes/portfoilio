@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default `pt-br` }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    <div class="page-shell">
+      {{ block "main" . }}{{ end }}
+    </div>
+    <script src="{{ `script.js` | relURL }}"></script>
+  </body>
+</html>

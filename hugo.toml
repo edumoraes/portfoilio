@@ -1,0 +1,5 @@
+baseURL = "https://example.org/"
+languageCode = "pt-br"
+title = "Eduardo de Moraes | Fullstack Engineer"
+enableRobotsTXT = true
+disableKinds = ["RSS", "taxonomy", "term"]

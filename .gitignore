@@ -1,0 +1,6 @@
+/public/
+/.hugo_build.lock
+.ai-jail
+.DS_Store
+Thumbs.db
+/resources/_gen/

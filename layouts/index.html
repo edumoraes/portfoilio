@@ -1,0 +1,109 @@
+{{ define "main" }}
+  <main id="top">
+    <section class="hero section reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">{{ .Params.hero.eyebrow }}</p>
+        <h1>{{ .Params.hero.title }}</h1>
+        <p class="hero-text">{{ .Params.hero.text }}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="{{ .Params.hero.primary_cta.target }}">
+            {{ .Params.hero.primary_cta.label }}
+          </a>
+          <a class="button button-secondary" href="{{ .Params.hero.secondary_cta.target }}">
+            {{ .Params.hero.secondary_cta.label }}
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Resumo profissional">
+        <p class="card-label">{{ .Params.availability.label }}</p>
+        <ul class="summary-list">
+          {{ range .Params.availability.items }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          {{ .Params.availability.status }}
+        </div>
+      </aside>
+    </section>
+
+    <section class="metrics section reveal" aria-label="Indicadores">
+      {{ range .Params.metrics }}
+        <article>
+          <strong>{{ .number }}</strong>
+          <p>{{ .text }}</p>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="section reveal" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">{{ .Params.projects.eyebrow }}</p>
+        <h2>{{ .Params.projects.heading }}</h2>
+      </div>
+
+      <div class="project-grid">
+        {{ range .Params.projects.items }}
+          <article class="project-card">
+            <p class="project-index">{{ .index }}</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+            <p class="project-stack">{{ .stack }}</p>
+            <ul class="project-results">
+              {{ range .results }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="split section reveal" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">Sobre</p>
+        <h2>{{ .Params.about.heading }}</h2>
+      </div>
+
+      <div class="about-copy">
+        {{ range .Params.about.paragraphs }}
+          <p>{{ . }}</p>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="timeline section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">{{ .Params.operating_model.eyebrow }}</p>
+        <h2>{{ .Params.operating_model.heading }}</h2>
+      </div>
+
+      <div class="timeline-list">
+        {{ range .Params.operating_model.steps }}
+          <article>
+            <span>{{ .step }}</span>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="contact section reveal" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contato</p>
+        <h2>{{ .Params.contact.heading }}</h2>
+      </div>
+
+      <div class="contact-panel">
+        {{ range .Params.contact.links }}
+          <a href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noreferrer"{{ end }}>
+            {{ .text }}
+          </a>
+        {{ end }}
+      </div>
+    </section>
+  </main>
+{{ end }}
