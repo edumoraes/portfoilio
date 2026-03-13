@@ -54,3 +54,4 @@ Também há um cuidado claro com qualidade de engenharia. O repositório mantém
 O resultado é um produto local-first coerente do início ao fim. O usuário continua dono dos seus arquivos, a renderização permanece no ambiente local e a IA só atua dentro de um fluxo que pode ser auditado e aprovado.
 
 Esse tipo de decisão técnica resolve um problema real de confiança. Em vez de pedir que o usuário aceite abstrações escondidas, o produto deixa visível onde os dados estão, como o documento é gerado e quando a IA está propondo uma mudança. É uma arquitetura que privilegia autonomia, previsibilidade e longevidade.
+---

@@ -51,3 +51,4 @@ O dashboard em Streamlit fecha o ciclo. Ele não existe como extra cosmético, e
 O resultado é uma ferramenta que vai além do scraping pontual. Ela coleta, amplia a cobertura, limpa o dado e entrega uma base pronta para análise geográfica. Isso reduz o trabalho manual nas duas pontas: menos esforço para consultar e menos esforço para interpretar.
 
 Tecnicamente, o valor está em tratar a coleta como pipeline e não como script isolado. A solução usa automação, geografia e visualização de forma integrada para resolver um problema operacional concreto: transformar consulta dispersa em visão territorial acionável.
+---

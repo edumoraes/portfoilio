@@ -1,0 +1,56 @@
+[nav_projects]
+other = "Projects"
+
+[nav_about]
+other = "About"
+
+[nav_contact]
+other = "Contact"
+
+[nav_main]
+other = "Main navigation"
+
+[hero_summary]
+other = "Professional summary"
+
+[project_read_case]
+other = "Read case study"
+
+[about_eyebrow]
+other = "About"
+
+[contact_eyebrow]
+other = "Contact"
+
+[cases_eyebrow]
+other = "Case studies"
+
+[case_back]
+other = "Back to case studies"
+
+[case_scope_aria]
+other = "Solution scope"
+
+[case_scope_label]
+other = "Scope"
+
+[case_results_aria]
+other = "Results and impact"
+
+[case_results_label]
+other = "Highlights"
+
+[case_links_aria]
+other = "Related links"
+
+[case_links_label]
+other = "Links"
+
+[language_switcher]
+other = "Language"
+
+[language_pt]
+other = "PT"
+
+[language_en]
+other = "EN"

@@ -2,7 +2,7 @@
   <main id="top">
     <section class="section reveal">
       <div class="section-heading">
-        <p class="eyebrow">Cases</p>
+        <p class="eyebrow">{{ T "cases_eyebrow" }}</p>
         <h1>{{ .Title }}</h1>
         <p class="case-summary">{{ .Params.summary }}</p>
       </div>
@@ -10,7 +10,7 @@
       <div class="project-grid">
         {{ range .Pages.ByWeight }}
           {{ $case := .Params.case }}
-          <a class="project-card-link" href="{{ .Permalink }}">
+          <a class="project-card-link" href="{{ .RelPermalink }}">
             <article class="project-card">
               <p class="project-index">{{ $case.index }}</p>
               <h3>{{ .Title }}</h3>
@@ -21,7 +21,7 @@
                   <li>{{ . }}</li>
                 {{ end }}
               </ul>
-              <span class="project-cta">Ler case</span>
+              <span class="project-cta">{{ T "project_read_case" }}</span>
             </article>
           </a>
         {{ end }}

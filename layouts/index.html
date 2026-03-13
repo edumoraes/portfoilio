@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <aside class="hero-card" aria-label="Resumo profissional">
+      <aside class="hero-card" aria-label="{{ T `hero_summary` }}">
         {{ with .Params.hero.image }}
           <div class="hero-card-media">
             <img src="{{ .src | relURL }}" alt="{{ .alt }}" />
@@ -44,28 +44,30 @@
       </div>
 
       <div class="project-grid">
-        {{ range .Params.projects.items }}
-          <a class="project-card-link" href="{{ strings.TrimPrefix `/` .url | absURL }}">
-            <article class="project-card">
-              <p class="project-index">{{ .index }}</p>
-              <h3>{{ .title }}</h3>
-              <p>{{ .description }}</p>
-              <p class="project-stack">{{ .stack }}</p>
-              <ul class="project-results">
-                {{ range .results }}
-                  <li>{{ . }}</li>
-                {{ end }}
-              </ul>
-              <span class="project-cta">Ler case</span>
-            </article>
-          </a>
+        {{ range $project := .Params.projects.items }}
+          {{ with $.Site.GetPage $project.page }}
+            <a class="project-card-link" href="{{ .RelPermalink }}">
+              <article class="project-card">
+                <p class="project-index">{{ $project.index }}</p>
+                <h3>{{ $project.title }}</h3>
+                <p>{{ $project.description }}</p>
+                <p class="project-stack">{{ $project.stack }}</p>
+                <ul class="project-results">
+                  {{ range $project.results }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+                <span class="project-cta">{{ T "project_read_case" }}</span>
+              </article>
+            </a>
+          {{ end }}
         {{ end }}
       </div>
     </section>
 
     <section class="split section reveal" id="about">
       <div class="section-heading">
-        <p class="eyebrow">Sobre</p>
+        <p class="eyebrow">{{ T "about_eyebrow" }}</p>
         <h2>{{ .Params.about.heading }}</h2>
       </div>
 
@@ -115,7 +117,7 @@
 
     <section class="contact section reveal" id="contact">
       <div class="section-heading">
-        <p class="eyebrow">Contato</p>
+        <p class="eyebrow">{{ T "contact_eyebrow" }}</p>
         <h2>{{ .Params.contact.heading }}</h2>
       </div>
 

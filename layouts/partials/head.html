@@ -4,6 +4,10 @@
   name="description"
   content="{{ .Params.description | default .Site.Title }}"
 />
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Lang }}" href="{{ .Permalink }}" />
+{{ end }}
 <title>
   {{ if .IsHome }}
     {{ .Site.Title }}

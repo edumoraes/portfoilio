@@ -1,5 +1,17 @@
 baseURL = "https://example.org/"
-languageCode = "pt-br"
-title = "Eduardo de Moraes | Fullstack Engineer"
+defaultContentLanguage = "pt"
+defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 disableKinds = ["RSS", "taxonomy", "term"]
+
+[languages.pt]
+languageCode = "pt-BR"
+languageName = "Português"
+title = "Eduardo de Moraes | Fullstack Engineer"
+weight = 1
+
+[languages.en]
+languageCode = "en-US"
+languageName = "English"
+title = "Eduardo de Moraes | Fullstack Engineer"
+weight = 2

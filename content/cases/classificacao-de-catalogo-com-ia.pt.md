@@ -53,3 +53,4 @@ O desenho da aplicação também é pragmático fora do núcleo de IA. Há progr
 O ganho principal foi transformar um processo que tomaria semanas em um fluxo concluído em horas, sem trocar velocidade por opacidade. A automação não esconde o que sabe e o que não sabe; ela explicita confiança, erro e dúvida como parte do produto.
 
 Isso torna a solução mais confiável para uso operacional. O time recebe uma planilha enriquecida, um relatório claro do que aconteceu e uma ferramenta que pode ser usada tanto por terminal quanto por interface gráfica. O resultado não é apenas menos trabalho manual. É mais previsibilidade no processo inteiro.
+---

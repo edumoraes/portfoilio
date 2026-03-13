@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Início
 description: Portfólio de Eduardo de Moraes, Fullstack Engineer com experiência em produtos web, automação e sistemas apoiados por IA.
 hero:
   eyebrow: Fullstack Engineer • TypeScript • Python • produto web • IA aplicada
@@ -36,7 +36,7 @@ projects:
       title: Comércio conversacional fullstack com IA, checkout guiado e operação em tempo real
       description: Solução fullstack para vender via conversa, combinar catálogo, atendimento automatizado, checkout controlado e acompanhamento em tempo real sem perder o controle da operação.
       stack: Next.js • FastAPI • PostgreSQL • Redis • Elasticsearch • LangGraph • WebSockets • WhatsApp
-      url: cases/comercio-conversacional-fullstack/
+      page: /cases/comercio-conversacional-fullstack
       results:
         - 90% de redução no transbordo do atendimento de IA para humano
         - mais de 300 conversas gerenciadas por IA
@@ -45,7 +45,7 @@ projects:
       title: Classificação de catálogo com IA, busca assistida e fallback operacional
       description: Pipeline para transformar um trabalho manual de classificação em um fluxo auditável, com busca web, decisão assistida por LLM, score de confiança e saídas prontas para operação.
       stack: Python • LangGraph • OpenAI • DuckDuckGo Search • Excel • GUI/CLI
-      url: cases/classificacao-de-catalogo-com-ia/
+      page: /cases/classificacao-de-catalogo-com-ia
       results:
         - reduziu para horas um processo que levaria pelo menos 3 semanas
         - automatizou a organização de catálogo e a consolidação operacional
@@ -54,7 +54,7 @@ projects:
       title: ViraLaTeX, uma workstation local-first para documentos com IA assistiva
       description: Produto open source para escrever, estruturar e renderizar documentos profissionais com arquivos locais como fonte da verdade e IA operando com aprovação explícita.
       stack: Tauri • Rust • React • TypeScript • Python • LangGraph • Tectonic
-      url: cases/viralatex/
+      page: /cases/viralatex
       results:
         - preserva arquivos locais como fonte da verdade
         - renderiza PDFs localmente com pipeline inspecionável
@@ -63,7 +63,7 @@ projects:
       title: Scraping operacional com geocodificação, deduplicação e leitura territorial
       description: Ferramenta para mapear presença física e cobertura territorial a partir de scraping, geração radial de CEPs e visualização geográfica em mapa interativo.
       stack: Python • Playwright • Geopy • Streamlit • CSV • geocodificação
-      url: cases/scraping-inteligencia-territorial/
+      page: /cases/scraping-inteligencia-territorial
       results:
         - amplia a cobertura de coleta a partir de um CEP central e raio configurável
         - remove duplicidades antes da análise

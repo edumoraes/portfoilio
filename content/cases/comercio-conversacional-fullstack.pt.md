@@ -55,3 +55,4 @@ Essa separação é o ponto mais pragmático do projeto. A IA não tenta resolve
 O resultado foi uma solução que funciona como produto e como operação. Ela reduz handoff desnecessário, preserva espaço para intervenção humana quando o caso exige e mantém o negócio auditável do começo ao fim.
 
 Os indicadores da operação mostram o efeito desse desenho: redução expressiva no transbordo para atendimento humano, centenas de conversas gerenciadas por IA em produção e geração de receita já nas primeiras semanas. Mais importante do que o número isolado é o que ele representa: a tecnologia foi usada para sustentar o fluxo comercial inteiro, e não apenas para automatizar a camada mais visível da conversa.
+---

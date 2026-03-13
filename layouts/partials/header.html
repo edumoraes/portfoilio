@@ -2,10 +2,25 @@
   {{ $home := .Site.Home.Permalink }}
   <div class="site-header__inner">
     <a class="brand" href="{{ $home }}">Eduardo de Moraes</a>
-    <nav class="site-nav" aria-label="Navegação principal">
-      <a href="{{ printf "%s#projects" $home | safeURL }}">Projetos</a>
-      <a href="{{ printf "%s#about" $home | safeURL }}">Sobre</a>
-      <a href="{{ printf "%s#contact" $home | safeURL }}">Contato</a>
-    </nav>
+    <div class="site-header__actions">
+      <nav class="site-nav" aria-label="{{ T `nav_main` }}">
+        <a href="{{ printf "%s#projects" $home | safeURL }}">{{ T "nav_projects" }}</a>
+        <a href="{{ printf "%s#about" $home | safeURL }}">{{ T "nav_about" }}</a>
+        <a href="{{ printf "%s#contact" $home | safeURL }}">{{ T "nav_contact" }}</a>
+      </nav>
+      <div class="language-switcher" aria-label="{{ T `language_switcher` }}">
+        {{ range sort .AllTranslations "Language.Weight" }}
+          {{ $label := printf "language_%s" .Lang }}
+          <a
+            class="language-switcher__link{{ if eq $.Lang .Lang }} is-active{{ end }}"
+            href="{{ .RelPermalink }}"
+            lang="{{ .Lang }}"
+            hreflang="{{ .Language.LanguageCode | default .Lang }}"
+          >
+            {{ T $label }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
   </div>
 </header>

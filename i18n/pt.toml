@@ -1,0 +1,56 @@
+[nav_projects]
+other = "Projetos"
+
+[nav_about]
+other = "Sobre"
+
+[nav_contact]
+other = "Contato"
+
+[nav_main]
+other = "Navegação principal"
+
+[hero_summary]
+other = "Resumo profissional"
+
+[project_read_case]
+other = "Ler case"
+
+[about_eyebrow]
+other = "Sobre"
+
+[contact_eyebrow]
+other = "Contato"
+
+[cases_eyebrow]
+other = "Cases"
+
+[case_back]
+other = "Voltar aos cases"
+
+[case_scope_aria]
+other = "Escopo da solução"
+
+[case_scope_label]
+other = "Escopo"
+
+[case_results_aria]
+other = "Resultados e efeitos"
+
+[case_results_label]
+other = "Destaques"
+
+[case_links_aria]
+other = "Links relacionados"
+
+[case_links_label]
+other = "Links"
+
+[language_switcher]
+other = "Idioma"
+
+[language_pt]
+other = "PT"
+
+[language_en]
+other = "EN"
